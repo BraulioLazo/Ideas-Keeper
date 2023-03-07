@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/style.css">
+    <title>Task Keeper</title>
+</head>
+
+<body>
+    <main>
+        <section id="ik__section_menu" class="ik__section_menu">
+            <div class="ik__section_menu__container">
+
+                <div class="ik__logo__container">
+                    <img src="images/aprendecode__logo__image.webp" alt="">
+                </div>
+
+                <div class="ik__ideas__priority__container">
+                    <button id="ik__btn__new__note">
+                        <img src="images/new__task__image.webp" alt="">
+                        Nueva Tarea
+                    </button>
+                    <h2>Buscar</h2>
+                    <button id="ik__btn__tasks">
+                        <img src="images/tasks__image.webp" alt="">
+                        Tareas
+                    </button>
+                    <div class="ik__note__priority">
+                        <img src="images/priority__image.webp" alt="">
+                        Prioridad Alta
+                    </div>
+                    <div class="ik__note__priority">
+                        <img src="images/priority__image.webp" alt="">
+                        Prioridad Media
+                    </div>
+                    <div class="ik__note__priority">
+                        <img src="images/priority__image.webp" alt="">
+                        Prioridad Baja
+                    </div>
+                </div>
+
+                <div class="ik__tools__container">
+                    <div class="ik__line__between"></div>
+                    <button class="ik__tools">
+                        <img src="images/ik__tools__image.webp" alt="">
+                        Reiniciar
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="ik__section__notes" class="ik__section__notes">
+            <div class="ik__section__notes__container">
+
+                <div class="ik__section__notes__header__container">
+                    <div class="ik__section__notes__header">
+                        <div class="ik__section__notes__container__text">
+                            <h1>
+                                Bienvenido a Ideas Keeper
+                            </h1>
+                            <p>
+                                Estás en Ideas Keeper. El lugar correcto si lo que quieres <br>
+                                es ser más productivo.
+                            </p>
+                        </div>
+
+                        <div class="ik__ideas__keeper__image__container">
+                            <img src="images/ideas__keeper__image.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="ik__section__notes__container__notes">
+
+                </div>
+
+
+            </div>
+        </section>
+
+        <section id="ik__section__note__form" class="ik__section__note__form">
+            <div class="ik__section__note__form__container">
+                <form id="ik__note__form">
+                    <p class="ik__form__btn__container">
+                        <input type="text" id="ik__input__title">
+                        <button id="ik__close__form" class="ik__btn"> Cerrar </button>
+                    </p> <br>
+                    <textarea id="ik__note__area" name="" id="" cols="20" rows="10"></textarea><br>
+                    <p class="ik__form__btn__container">
+
+                    <input type="button" id="btn__keepnote" value="Guardar" class="ik__btn">
+                
+                    <select name="" id="ik__select__priority">
+                        <option value="Alta"> Alta </option>
+                        <option value="Media"> Media </option>
+                        <option value="Baja"> Baja </option>
+                    </select>
+                </p>
+                </form>
+            </div>
+        </section>
+
+        <section id="ik__section__user__info" class="ik__section__user__info">
+            <div class="ik__section__user__info__container">
+
+                <div class="ik__user__container">
+                    <div class="ik__user__logo">
+                        <img src="images/avatar__user__image.webp" alt="">
+                    </div>
+                    <div class="ik__user__level__container">
+                       <p class="ik__user__name__container"></p>
+                       <div class="ik__level__container"></div>
+                    </div>
+                    <div class="container__input__change__name">
+                        <form id="form__change__name">
+                            <input type="text" id="input__change__name" placeholder="Nombre..." required>
+                        </form>
+                    </div>
+                    <div class="ik__line__between"></div>
+                </div>
+                <div class="ik__task__information__container">
+                    <div class="ik__progress__bars__container">
+
+                        <h2> Historial de Tareas </h2>
+
+                        <div class="ik__progress__bar__today__container">
+                            <div class="ik__progress__bar__today">
+                                <div class="ik__progress__bar__text">
+                                    <h3 class="ik__progress__bar__porcent">
+                                        0%
+                                    </h3>
+                                    <p>
+                                        Tareas terminadas <br> Hoy
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ik__progress__bar__today__container">
+                            <div class="ik__progress__bar__next__level">
+                                <div class="ik__progress__bar__text">
+                                    <h3 class="ik__progress__bar__porcent__next__level">
+                                        
+                                    </h3>
+                                    <div class="ik__progress__bar__text__next__level">
+                                        <p>  </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+<script src="JavaScript/TaskKeeper.js"></script>
+</body>
+
+</html>

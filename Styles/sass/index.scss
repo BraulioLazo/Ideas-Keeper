@@ -1,0 +1,579 @@
+
+/* Section Menu ----------------------------------------------------------------*/
+
+.ik__section_menu__container {
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    width: 250px;
+    height: 100%;
+    padding: 30px;
+    background-color: var(--background-color-container);
+    box-shadow: 10px 0px 20px var(--shadow-dark);
+
+    .ik__logo__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+        border-radius: 50%;
+        border: 5px solid var(--background-color-container);
+        box-shadow: var(--shadow-container);
+
+        img {
+            width: 100px;
+        }
+    }
+
+    .ik__ideas__priority__container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        h2 {
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        img {
+            width: 25px;
+        }
+
+        .ik__note__priority {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: transform .4s ease;
+
+        }
+    }
+
+    .ik__ideas__priority__container button,
+    .ik__tools__container button {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        cursor: pointer;
+        background-color: var(--background-color-container);
+        transition: transform .4s ease;
+    }
+
+    .ik__note__priority:hover,
+    button:hover,
+    .ik__tools:hover {
+        font-weight: 600;
+        transform: scale(1.06, 1.06);
+    }
+
+
+    .ik__tools__container {
+        width: 100%;
+
+        .ik__tools {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: transform .4s ease;
+
+            img {
+                width: 25px;
+            }
+
+        }
+    }
+}
+
+/* Section Notes ---------------------------------------------------------------*/
+
+#ik__section__notes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 700px;
+    overflow-y: auto;
+
+    .ik__section__notes__container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 30px;
+        width: 100%;
+        height: 100%;
+
+
+        .ik__section__notes__header__container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 30px;
+
+            .ik__section__notes__header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: var(--background-color-container);
+                border-radius: var(--radius-main);
+                box-shadow: -10px -10px 20px var(--shadow-ligth),
+                    10px 10px 20px var(--shadow-dark);
+
+                .ik__section__notes__container__text {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    gap: 12px;
+
+                    h1 {
+                        width: 100%;
+                        font-size: 30px;
+                        font-style: italic;
+                    }
+                }
+
+                .ik__ideas__keeper__image__container {
+                    width: 150px;
+                    margin-top: 20px;
+                    margin-right: 30px;
+                    margin-bottom: -80px;
+                    border-radius: 12px;
+                    box-shadow: var(--shadow-container-outside);
+                    transform: rotateZ(25deg);
+
+                    img {
+                        width: 100%;
+                        margin-top: -12px;
+                        margin-bottom: -4px;
+                        transform: scale(1.02, 1.02);
+                    }
+                }
+
+            }
+
+        }
+
+        .ik__section__notes__container__notes {
+            display: flex;
+            justify-content: center;
+            align-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px 30px 30px;
+
+            .ik__note__container {
+                position: relative;
+                display: flex;
+                align-items: baseline;
+                flex-wrap: wrap;
+                gap: 10px;
+                max-width: 350px;
+                padding: 20px;
+                border-radius: var(--radius-main);
+                background-color: var(--background-color-container);
+                box-shadow: -10px -10px 20px var(--shadow-ligth),
+                    10px 10px 20px var(--shadow-dark);
+
+                .ik__note__menu__container {
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+
+                    .ik__note__menu__image {
+                        position: absolute;
+                        top: 12px;
+                        right: 12px;
+                        width: 20px;
+                        z-index: 1;
+                        cursor: pointer;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .ik__note__menu__container__button__image {
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                        display: flex;
+                        align-items: center;
+                        align-content: center;
+                        flex-wrap: wrap;
+                        gap: 5px;
+                        width: 0px;
+                        height: 0px;
+                        padding: 0px;
+                        border-radius: 8px;
+                        background-color: var(--background-color-container);
+                        overflow: hidden;
+
+                        button {
+                            width: 100%;
+                            border: none;
+                            text-align: left;
+                            font-size: 16px;
+                            background-color: transparent;
+                            cursor: pointer;
+                            transition: transform .4s ease;
+                        }
+
+                        button:hover {
+                            transform: scale(1.1, 1.1);
+                            font-weight: 600;
+                        }
+                    }
+
+                    .deploy__note__menu {
+                        width: 120px;
+                        height: 65px;
+                        padding: 0 12px;
+                        box-shadow: var(--shadow-outside);
+                    }
+                }
+
+                .deploy__container__note__menu {
+                    left: 0px;
+                    bottom: 0px;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: var(--radius-main);
+                    backdrop-filter: blur(8px);
+                }
+
+                .ik__container__title {
+                    width: 100%;
+                    font-style: italic;
+                    font-weight: 700;
+                }
+
+                .ik__note__pririty__done__container {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+
+                    .ik__p__priority {
+                        padding: 6px 20px;
+                        border-radius: var(--radius-circular);
+                        background-color: rgb(250, 171, 0);
+                        font-style: italic;
+                    }
+
+                    .ik__work__done {
+                        border: none;
+                        outline: none;
+                        padding: 8px 20px;
+                        font-style: italic;
+                        font-weight: 600;
+                        border-radius: var(--radius-circular);
+                        box-shadow: var(--shadow-inside);
+                        cursor: pointer;
+                        transition: box-shadow .5s ease;
+                    }
+
+                    .ik__work__done:hover {
+                        box-shadow: var(--shadow-outside);
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+/* Section Form to add NOTE ----------------------------------------------------*/
+
+
+.ik__section__note__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+    z-index: 1;
+
+    .ik__section__note__form__container {
+        padding: 30px;
+        border-radius: var(--radius-main);
+        border: 5px solid var(--background-color-container);
+        box-shadow: var(--shadow-container);
+        background-color: var(--background-color-container);
+
+        .ik__form__btn__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+        }
+
+        #ik__note__form {
+            #ik__close__form {
+                border: 5px solid var(--background-color-container);
+                box-shadow: var(--shadow-inside);
+            }
+
+            textarea {
+                max-width: 600px;
+                min-width: 600px;
+                min-height: 200px;
+                margin: 20px 0;
+                padding: 20px;
+                border-radius: var(--radius-main);
+                box-shadow: var(--shadow-outside);
+            }
+
+            #ik__select__priority {
+                padding: 10px 20px;
+                font-size: 22px;
+                font-style: italic;
+                font-weight: 400;
+                border: none;
+                outline: none;
+                border-radius: var(--radius-circular);
+                background-color: var(--background-color-container);
+                cursor: pointer;
+                transition: box-shadow .5s ease;
+                box-shadow: var(--shadow-outside);
+            }
+
+            #btn__keepnote,
+            #btn__updatenote {
+                border: 5px solid var(--background-color-container);
+                box-shadow: var(--shadow-inside);
+            }
+
+            #btn__keepnote:hover,
+            #ik__close__form:hover,
+            #btn__updatenote:hover {
+                box-shadow: var(--shadow-both);
+            }
+        }
+    }
+}
+
+
+.ik__btn {
+    padding: 10px 20px;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 800;
+    border: none;
+    outline: none;
+    border-radius: var(--radius-circular);
+    background-color: var(--background-color-container);
+    cursor: pointer;
+    transition: box-shadow .5s ease;
+    box-shadow: var(--shadow-inside);
+}
+
+section.deploy__form {
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+input,
+#ik__note__form textarea {
+    border: none;
+    outline: none;
+    background-color: var(--background-color-container);
+}
+
+input {
+    padding: 10px 40px;
+    border-radius: var(--radius-circular);
+    box-shadow: var(--shadow-inside);
+    background-color: var(--background-color-container);
+    transition: box-shadow .4s ease;
+}
+
+input:hover {
+    box-shadow: var(--shadow-outside);
+}
+
+input:focus {
+    box-shadow: var(--shadow-outside);
+}
+
+
+
+/* Section USER INFO ------------------------------------------------------------*/
+
+.ik__section__user__info__container {
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    width: 250px;
+    height: 100%;
+    padding: 20px;
+    background-color: var(--background-color-container);
+    box-shadow: -10px 0px 20px var(--shadow-dark);
+
+    .ik__user__container {
+        margin: 0 auto;
+        text-align: center;
+
+        .ik__user__logo {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 40px auto 20px auto;
+            border-radius: 50%;
+            border: 4px solid var(--background-color-container);
+            box-shadow: var(--shadow-both);
+            cursor: pointer;
+
+            img {
+                position: absolute;
+                left: -4px;
+                bottom: 5px;
+                width: 120px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .ik__level__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            font-weight: 600;
+
+            img {
+                width: 20px;
+            }
+        }
+
+        .container__input__change__name {
+            height: 0px;
+            overflow: hidden;
+
+            input {
+                width: 200px;
+                padding: 10px;
+                text-align: center;
+            }
+        }
+
+        .deploy__change__name {
+            height: 65px;
+            padding: 20px 5px 5px 5px;
+        }
+
+    }
+
+    .ik__task__information__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-top: 40px;
+
+        .ik__progress__bars__container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+
+            h2 {
+                font-size: 25px;
+                font-style: italic;
+                text-align: center;
+                margin-top: -30px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+
+            .ik__progress__bar__today__container {
+                width: 180px;
+                height: 180px;
+                margin: 0 auto;
+                padding: 5px;
+                border-radius: 50%;
+                background-color: var(--background-color-container);
+                border: 5px solid var(--background-color-container);
+                box-shadow: var(--shadow-container);
+            }
+
+            .ik__progress__bar__today,
+            .ik__progress__bar__next__level {
+                width: 100%;
+                height: 100%;
+                padding: 10px;
+                border-radius: 50%;
+                background-image: conic-gradient(#0089DC, 0deg, var(--background-color-container) 0deg);
+            }
+
+            .ik__progress__bar__text {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                flex-wrap: wrap;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                box-shadow: 2px 2px 4px var(--shadow-dark),
+                    -2px -2px 4px var(--shadow-dark);
+                background-color: var(--background-color-container);
+                text-align: center;
+                font-style: italic;
+            }
+
+            .ik__progress__bar__porcent,
+            .ik__progress__bar__porcent__next__level {
+                width: 100%;
+                font-size: 35px;
+                margin-top: -15px;
+            }
+
+            .ik__progress__bar__text__next__level {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                p {
+                    font-weight: 600;
+                }
+
+                img {
+                    width: 20px;
+                }
+                
+            }
+            
+
+        }
+    }
+}
+
+main section .ik__line__between {
+    width: 100%;
+    height: 4px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: var(--shadow-outside);
+}
+
+
