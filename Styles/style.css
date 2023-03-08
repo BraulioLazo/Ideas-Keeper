@@ -45,7 +45,6 @@ body {
 }
 
 main {
-  position: relative;
   display: flex;
   width: 100%;
   height: 100%;
@@ -301,17 +300,18 @@ main {
   box-shadow: var(--shadow-outside);
 }
 
-.ik__deploy__menu,
-.ik__deploy__user__info {
+.ik__deploy__menu__icon,
+.ik__deploy__user__info__icon {
   display: none;
   height: 80px;
   padding: 2px;
   border-radius: 0 8px 8px 0;
   background-color: var(--background-color-container);
   box-shadow: var(--shadow-outside);
+  z-index: 999;
 }
-.ik__deploy__menu img,
-.ik__deploy__user__info img {
+.ik__deploy__menu__icon img,
+.ik__deploy__user__info__icon img {
   width: 25px;
 }
 
@@ -562,18 +562,14 @@ main section .ik__line__between {
 
 /* Media Queries ----------------------------*/
 @media screen and (max-width: 1200px) {
-  main {
-    padding-right: 20px;
-  }
   main .ik__section__user__info {
     position: fixed;
     top: 0px;
     right: 0px;
     bottom: 0px;
     width: 0px;
-    overflow: hidden;
   }
-  main .ik__section__notes__container .ik__deploy__user__info {
+  main .ik__section__notes__container .ik__deploy__user__info__icon {
     position: absolute;
     top: calc(50% - 40px);
     right: 0px;
@@ -581,7 +577,11 @@ main section .ik__line__between {
     justify-content: center;
     align-items: center;
     border-radius: 8px 0 0 8px;
-    box-shadow: -4px 4px 8px var(--shadow-dark), 4px -4px 8px var(--shadow-ligth);
+    box-shadow: -4px 4px 8px var(--shadow-dark), 0px -4px 8px var(--shadow-ligth);
+  }
+  section.ik__deploy__menu__user__info {
+    width: 250px;
+    right: 0px;
   }
 }
 @media screen and (max-width: 950px) {
@@ -593,7 +593,7 @@ main section .ik__line__between {
     width: 0px;
     overflow: hidden;
   }
-  .ik__section__notes__container .ik__deploy__menu {
+  .ik__section__notes__container .ik__deploy__menu__icon {
     position: absolute;
     top: calc(50% - 40px);
     left: 0px;

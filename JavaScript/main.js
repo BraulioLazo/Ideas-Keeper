@@ -56,6 +56,7 @@ function startTaskKeeper() {
     updateUserLevel();
     startDataBase();
     updatePregressBarLevel();
+    deployMenuUserInfo()
 
 }
 window.addEventListener("load", startTaskKeeper);
@@ -301,8 +302,22 @@ function resetTaskKeeper(){
 }
 
 
-// Data Base --------------------------------------------------------------
+// Deploy menu and user info --------------------------------------------------------------
 
+function deployMenuUserInfo(){
+    const sectionUserInfo = document.querySelector(".ik__section__user__info");
+
+    const iconDeployUserInfo = document.querySelector(".ik__deploy__user__info__icon");
+    iconDeployUserInfo.addEventListener("click", () => {
+        sectionUserInfo.classList.toggle("ik__deploy__menu__user__info")
+
+        if(sectionUserInfo.classList.contains("ik__deploy__menu__user__info")){
+            iconDeployUserInfo.style.transform = "translateX(-250px)";
+        } else {
+            iconDeployUserInfo.style.transform = "translateX(0px)";
+        }
+    })
+}
 
 
 
