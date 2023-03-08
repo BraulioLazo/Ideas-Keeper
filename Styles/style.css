@@ -53,6 +53,7 @@ main {
 
 /* Section Menu ----------------------------------------------------------------*/
 .ik__section_menu__container {
+  position: relative;
   display: flex;
   align-content: space-between;
   flex-wrap: wrap;
@@ -298,6 +299,13 @@ main {
 }
 #ik__section__notes .ik__section__notes__container .ik__section__notes__container__notes .ik__note__container .ik__note__pririty__done__container .ik__work__done:hover {
   box-shadow: var(--shadow-outside);
+}
+
+.ik__deploy__menu {
+  display: none;
+}
+.ik__deploy__menu img {
+  width: 25px;
 }
 
 /* Section Form to add NOTE ----------------------------------------------------*/
@@ -550,13 +558,36 @@ main section .ik__line__between {
   main {
     padding-right: 20px;
   }
-  main #ik__section__user__info {
+  main .ik__section__user__info {
     position: fixed;
     top: 0px;
     right: 0px;
     bottom: 0px;
     width: 0px;
     overflow: hidden;
+  }
+}
+@media screen and (max-width: 950px) {
+  .ik__section_menu {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 0px;
+    overflow: hidden;
+  }
+  .ik__section__notes__container .ik__deploy__menu {
+    position: absolute;
+    top: calc(50% - 40px);
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    padding: 2px;
+    border-radius: 0 8px 8px 0;
+    background-color: var(--background-color-container);
+    box-shadow: var(--shadow-outside);
   }
 }
 

@@ -1,7 +1,7 @@
-
 /* Section Menu ----------------------------------------------------------------*/
 
 .ik__section_menu__container {
+    position: relative;
     display: flex;
     align-content: space-between;
     flex-wrap: wrap;
@@ -89,6 +89,8 @@
         }
     }
 }
+
+
 
 /* Section Notes ---------------------------------------------------------------*/
 
@@ -289,6 +291,16 @@
                 }
             }
         }
+
+      
+    }
+}
+
+.ik__deploy__menu {
+    display: none;
+
+    img{
+        width: 25px;
     }
 }
 
@@ -560,9 +572,9 @@ input:focus {
                 img {
                     width: 20px;
                 }
-                
+
             }
-            
+
 
         }
     }
@@ -579,11 +591,11 @@ main section .ik__line__between {
 
 /* Media Queries ----------------------------*/
 
-@media  screen and (max-width: 1200px) {
-    main{
+@media screen and (max-width: 1200px) {
+    main {
         padding-right: 20px;
 
-        #ik__section__user__info{
+        .ik__section__user__info {
             position: fixed;
             top: 0px;
             right: 0px;
@@ -595,3 +607,30 @@ main section .ik__line__between {
     }
 }
 
+@media screen and (max-width: 950px) {
+    .ik__section_menu {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        width: 0px;
+        overflow: hidden;
+    }
+
+    .ik__section__notes__container {
+        .ik__deploy__menu {
+            position: absolute;
+            top: calc(50% - 40px);
+            left: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+            padding: 2px;
+            border-radius: 0 8px 8px 0;
+            background-color: var(--background-color-container);
+            box-shadow: var(--shadow-outside);
+        }
+    }
+
+}
