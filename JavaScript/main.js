@@ -50,13 +50,13 @@ function startTaskKeeper() {
     btnCloseForm.addEventListener("click", deployNoteForm);
 
     const btnResetTaskKeeper = document.querySelector(".ik__tools");
-    btnResetTaskKeeper.addEventListener("click", resetTaskKeeper)
+    btnResetTaskKeeper.addEventListener("click", resetTaskKeeper);
 
     generateUserName();
     updateUserLevel();
     startDataBase();
     updatePregressBarLevel();
-    deployMenuUserInfo()
+    deployMenuUserInfo();
 
 }
 window.addEventListener("load", startTaskKeeper);
@@ -294,8 +294,8 @@ function updatePregressBarLevel() {
 
 }
 
-function resetTaskKeeper(){
-    if(confirm("¿Estás Seguro que desea reiniciar el programa desde cero?")){
+function resetTaskKeeper() {
+    if (confirm("¿Estás Seguro que desea reiniciar el programa desde cero?")) {
         localStorage.clear();
         location.reload();
     }
@@ -304,17 +304,29 @@ function resetTaskKeeper(){
 
 // Deploy menu and user info --------------------------------------------------------------
 
-function deployMenuUserInfo(){
+function deployMenuUserInfo() {
     const sectionUserInfo = document.querySelector(".ik__section__user__info");
+    const sectionMenu = document.querySelector(".ik__section_menu");
 
     const iconDeployUserInfo = document.querySelector(".ik__deploy__user__info__icon");
     iconDeployUserInfo.addEventListener("click", () => {
-        sectionUserInfo.classList.toggle("ik__deploy__menu__user__info")
+        sectionUserInfo.classList.toggle("ik__deploy__menu__user__info");
 
-        if(sectionUserInfo.classList.contains("ik__deploy__menu__user__info")){
+        if (sectionUserInfo.classList.contains("ik__deploy__menu__user__info")) {
             iconDeployUserInfo.style.transform = "translateX(-250px)";
         } else {
             iconDeployUserInfo.style.transform = "translateX(0px)";
+        }
+    });
+
+    const deployMenuIcon = document.querySelector(".ik__deploy__menu__icon");
+    deployMenuIcon.addEventListener("click", () => {
+        sectionMenu.classList.toggle("ik__deploy__menu__user__info");
+
+        if (sectionMenu.classList.contains("ik__deploy__menu__user__info")) {
+            deployMenuIcon.style.transform = "translateX(+250px)";
+        } else {
+            deployMenuIcon.style.transform = "translateX(0px)";
         }
     })
 }

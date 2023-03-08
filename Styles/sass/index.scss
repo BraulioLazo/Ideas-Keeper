@@ -601,13 +601,20 @@ main section .ik__line__between {
 
 
 /* Media Queries ----------------------------*/
-
+body main {
+    section.ik__deploy__menu__user__info{
+        width: 250px;
+        z-index: 1;
+        overflow: visible;
+    } 
+}
 
 
 @media screen and (max-width: 1200px) {
     main {
+       
         .ik__section__user__info {
-            position: fixed;
+            position: absolute;
             top: 0px;
             right: 0px;
             bottom: 0px;
@@ -631,17 +638,14 @@ main section .ik__line__between {
 
     }
 
-    section.ik__deploy__menu__user__info{
-        width: 250px;
-        right: 0px;
-    }  
+    
 }
 
 @media screen and (max-width: 950px) {
     .ik__section_menu {
-        position: fixed;
+        position: absolute;
         top: 0px;
-        right: 0px;
+        left: 0px;
         bottom: 0px;
         width: 0px;
         overflow: hidden;
@@ -659,3 +663,4 @@ main section .ik__line__between {
     }
 
 }
+
