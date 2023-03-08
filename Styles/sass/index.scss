@@ -577,3 +577,21 @@ main section .ik__line__between {
 }
 
 
+/* Media Queries ----------------------------*/
+
+@media  screen and (max-width: 1200px) {
+    main{
+        padding-right: 20px;
+
+        #ik__section__user__info{
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            width: 0px;
+            overflow: hidden;
+        }
+
+    }
+}
+
