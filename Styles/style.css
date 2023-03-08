@@ -569,6 +569,9 @@ body main section.ik__deploy__menu__user__info {
 }
 
 @media screen and (max-width: 1200px) {
+  main {
+    overflow: hidden;
+  }
   main .ik__section__user__info {
     position: absolute;
     top: 0px;
