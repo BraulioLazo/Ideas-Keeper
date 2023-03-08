@@ -296,13 +296,21 @@
     }
 }
 
-.ik__deploy__menu {
+.ik__deploy__menu,
+.ik__deploy__user__info {
     display: none;
+    height: 80px;
+    padding: 2px;
+    border-radius: 0 8px 8px 0;
+    background-color: var(--background-color-container);
+    box-shadow: var(--shadow-outside);
 
     img{
         width: 25px;
     }
 }
+
+
 
 /* Section Form to add NOTE ----------------------------------------------------*/
 
@@ -604,6 +612,20 @@ main section .ik__line__between {
             overflow: hidden;
         }
 
+        .ik__section__notes__container{
+            .ik__deploy__user__info{
+                position: absolute;
+                top: calc(50% - 40px);
+                right: 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 8px 0 0 8px;
+                box-shadow: -4px 4px 8px var(--shadow-dark),
+                             4px -4px 8px var(--shadow-ligth);;
+            }
+        }
+
     }
 }
 
@@ -625,11 +647,6 @@ main section .ik__line__between {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 80px;
-            padding: 2px;
-            border-radius: 0 8px 8px 0;
-            background-color: var(--background-color-container);
-            box-shadow: var(--shadow-outside);
         }
     }
 

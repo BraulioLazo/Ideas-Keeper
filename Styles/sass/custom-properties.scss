@@ -15,10 +15,10 @@
     2px 2px 4px transparent,
     -2px -2px 4px transparent;
 
-  --shadow-outside: inset 2px 2px 4px transparent,
-    inset -2px -2px 4px transparent,
-    2px 2px 4px var(--shadow-dark),
-    -2px -2px 4px var(--shadow-ligth);
+  --shadow-outside: inset 4px 4px 8px transparent,
+    inset -4px -4px 8px transparent,
+    4px 4px 8px var(--shadow-dark),
+    -4px -4px 8px var(--shadow-ligth);
 
   --shadow-both: inset 2px 2px 4px var(--shadow-dark),
     inset -2px -2px 4px var(--shadow-ligth),
